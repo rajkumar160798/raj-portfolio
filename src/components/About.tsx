@@ -58,14 +58,14 @@ const About = () => {
               <div className="space-y-6">
                 <div className="glass-card p-6">
                   <h4 className="font-bold">Software Developer</h4>
-                  <p className="text-neon-purple">GCP | AI | Angular + Spring Boot • 2022–Present</p>
+                  <p className="text-neon-purple">CVS HEALTH | GCP | AI | Angular + Spring Boot • 2023–Present</p>
                   <p className="text-foreground/70 mt-2">
                     Leading development of cloud-native, ML-integrated applications with real-time monitoring and interactive dashboards
                   </p>
                 </div>
                 <div className="glass-card p-6">
                   <h4 className="font-bold">Full Stack Developer</h4>
-                  <p className="text-neon-purple">Barclays | Capgemini • 2019–2022</p>
+                  <p className="text-neon-purple">Barclays | React + Spring Boot • 2022–2023</p>
                   <p className="text-foreground/70 mt-2">
                     Built and deployed microservices, implemented secure authentication flows, and optimized application performance
                   </p>

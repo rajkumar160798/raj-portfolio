@@ -47,7 +47,7 @@ const Navigation = () => {
             href="#home" 
             className="text-2xl font-bold tracking-tight neon-text"
           >
-            Raj
+            Raj Myakala
           </a>
           
           {/* Social Icons - Desktop Only */}
@@ -69,7 +69,8 @@ const Navigation = () => {
               <Linkedin size={18} />
             </a>
             <a 
-              href="mailto:raj@example.com" 
+              href="mailto:myalakalarajkumar1998@gmail.com" 
+
               className="text-foreground/60 hover:text-neon-purple transition-colors"
             >
               <Mail size={18} />
