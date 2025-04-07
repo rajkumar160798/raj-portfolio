@@ -61,8 +61,10 @@
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
   
+  /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
+    height: 8px;
   }
   
   ::-webkit-scrollbar-track {
@@ -70,11 +72,7 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-neon-purple/30 rounded-full;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-neon-purple/50;
+    @apply bg-neon-purple/30 rounded-full hover:bg-neon-purple/50 transition-colors;
   }
 }
 
@@ -108,6 +106,10 @@
   .button-outlined {
     @apply px-6 py-3 rounded-lg border border-neon-purple/50 text-neon-purple font-medium transition-all hover:border-neon-purple hover:bg-neon-purple/10 hover:shadow-[0_0_15px_rgba(155,135,245,0.3)] duration-300;
   }
+  
+  .hover-card {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
 }
 
 .particles-container {
@@ -123,10 +125,11 @@
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(155, 135, 245, 1), rgba(155, 135, 245, 0));
   pointer-events: none;
   z-index: -1;
   opacity: 0.4;
+  transition: transform 0.2s ease-out;
+  will-change: transform, opacity;
 }
 
 .typing-cursor {
@@ -143,21 +146,27 @@
   50% { opacity: 0; }
 }
 
-.parallax-container {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 
-.parallax-bg {
-  position: absolute;
-  height: 150%;
-  width: 150%;
-  top: -25%;
-  left: -25%;
-  background-size: cover;
-  z-index: -1;
-  transform-origin: center center;
-  transition: transform 0.1s linear;
+@keyframes glow {
+  0%, 100% { opacity: 0.5; filter: blur(1px); }
+  50% { opacity: 1; filter: blur(2px); }
+}
+
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 5px #9b87f5, 0 0 10px #9b87f5, 0 0 20px #9b87f5;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* Code block styling */
+pre {
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: -0.5px;
 }
