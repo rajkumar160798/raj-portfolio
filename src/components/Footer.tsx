@@ -41,7 +41,7 @@ const Footer = () => {
           
           <div className="flex items-center gap-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/rajkumar160798" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground/70 hover:text-neon-purple transition-colors p-2 rounded-full hover:bg-neon-purple/10"
@@ -50,7 +50,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/raj-kumar-myakala-927860264/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground/70 hover:text-neon-purple transition-colors p-2 rounded-full hover:bg-neon-purple/10"
@@ -59,7 +59,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="https://medium.com" 
+              href="https://medium.com/@myakalarajkumar1998" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground/70 hover:text-neon-purple transition-colors p-2 rounded-full hover:bg-neon-purple/10"

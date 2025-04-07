@@ -5,17 +5,25 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, Code, ExternalLink, Sparkles, Cpu, HardDrive, Server, Layers, Command } from "lucide-react";
 import { motion } from "framer-motion";
 
+
+const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-b from-background/10 to-background/20 opacity-100"
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center lg:text-left lg:items-start mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neon-purple/30 bg-neon-purple/5 text-neon-purple text-sm mb-6">
-            <Sparkles size={14} className="animate-pulse" />
-            <span>Creative Developer</span>
+            <Sparkles size={20} className="animate-pulse" />
+            <span>AI|ML Developer | Data Engineer | Full Stack Developer </span>
           </div>
           
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-4">
@@ -29,26 +37,29 @@ const Hero = () => {
               typingSpeed={100}
               className="text-gradient font-bold"
             />
-            {" "}experiences
+            {" "}Web Applications, Ai Solutions and ML Models
           </h2>
           <p className="text-lg text-foreground/70 mt-6 max-w-lg mx-auto lg:mx-0">
-            I craft exceptional digital experiences that live at the intersection 
-            of design and technology.
+          I build intelligent digital solutions at the intersection of AI, cloud, and design — turning complex ideas into real-world impact.
           </p>
           
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-10">
-            <Button className="bg-neon-purple hover:bg-neon-purple/90 gap-2 text-white">
+            <Button 
+            onClick={() => scrollToSection("work")} 
+            className="bg-neon-purple hover:bg-neon-purple/90 gap-2 text-white">
               View My Work <ChevronRight size={16} />
             </Button>
-            <Button variant="outline" className="border-neon-purple/50 text-neon-purple hover:bg-neon-purple/10 gap-2">
+            <Button 
+            onClick={() => scrollToSection("contact")}
+            variant="outline" className="border-neon-purple/50 text-neon-purple hover:bg-neon-purple/10 gap-2">
               Get in Touch <ExternalLink size={16} />
             </Button>
           </div>
         </div>
 
         {/* Animated tech icons */}
-        <div className="hidden md:flex absolute right-8 top-32 gap-4">
-          {[Cpu, HardDrive, Server, Layers, Command].map((Icon, index) => (
+        {/* <div className="hidden md:flex absolute right-8 top-32 gap-4">
+          {[].map((Icon, index) => (
             <motion.div 
               key={index}
               initial={{ y: -20, opacity: 0 }}
@@ -65,7 +76,7 @@ const Hero = () => {
               />
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         {/* Creative Code Display */}
         <motion.div 
@@ -116,11 +127,13 @@ const Hero = () => {
               <div className="space-y-2 animate-float">
                 <pre className="text-foreground/50">{`const `}<span className="text-neon-pink">Developer</span>{` = () => {`}</pre>
                 <pre className="pl-4 text-foreground/60">{`const skills = [`}</pre>
-                <pre className="pl-8 text-neon-purple">{`'React', 'TypeScript', 'UI/UX Design',`}</pre>
-                <pre className="pl-8 text-neon-purple">{`'Animation', 'Creative Coding', 'Web Design'`}</pre>
+                <pre className="pl-8 text-neon-purple">{}</pre>
+                <pre className="pl-8 text-neon-purple">{`"Angular", "React", "TypeScript", "JavaScript", "Spring Boot", "Java", "Python", "GCP", "BigQuery",
+    "Airflow", "Firestore", "Docker", "Kubernetes", "REST APIs", "Microservices", "Firebase", "Tailwind CSS",
+    "Data Engineering", "AI/ML", "FastAPI", "Node.js", "Next.js", "UI/UX Design", "Power BI"`}</pre>
                 <pre className="pl-4 text-foreground/60">{`];`}</pre>
                 <pre className="pl-4 text-foreground/90">
-                  {`const `}<span className="text-neon-pink">passion</span>{` = 'Creating beautiful web experiences';`}
+                  {`const `}<span className="text-neon-pink">passion</span>{` = 'Creating beautiful web experiences and Predecetive Analytics using AI/ML';`}
                 </pre>
                 <pre className="pl-4 text-foreground/90 mt-2">
                   {`return (`}

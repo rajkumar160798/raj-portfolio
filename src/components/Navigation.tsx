@@ -53,7 +53,7 @@ const Navigation = () => {
           {/* Social Icons - Desktop Only */}
           <div className="hidden md:flex items-center gap-3 ml-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/rajkumar160798" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground/60 hover:text-neon-purple transition-colors"
@@ -61,7 +61,7 @@ const Navigation = () => {
               <Github size={18} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/raj-kumar-myakala-927860264/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground/60 hover:text-neon-purple transition-colors"

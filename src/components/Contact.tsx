@@ -128,20 +128,20 @@ const Contact = () => {
                   href="mailto:raj@example.com" 
                   className="text-lg font-medium text-neon-purple hover:text-neon-blue transition-colors"
                 >
-                  raj@example.com
+                  myakalarajkumar1998@gmail.com
                 </a>
               </div>
               
               <div>
                 <p className="text-sm text-foreground/60">Based in</p>
-                <p className="text-lg font-medium">San Francisco, CA</p>
+                <p className="text-lg font-medium">Dallas, TX</p>
               </div>
               
               <div>
                 <p className="text-sm text-foreground/60">Follow me</p>
                 <div className="flex gap-4 mt-2">
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/rajkumar160798" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-foreground/70 hover:text-neon-purple transition-colors"

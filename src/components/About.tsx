@@ -3,8 +3,9 @@ import React from "react";
 
 const About = () => {
   const skills = [
-    "React", "TypeScript", "JavaScript", "Three.js", "GSAP",
-    "Tailwind CSS", "UI/UX Design", "Figma", "Web Animation", "CSS/SCSS"
+    "Angular", "React", "TypeScript", "JavaScript", "Spring Boot", "Java", "Python", "GCP", "BigQuery",
+    "Airflow", "Firestore", "Docker", "Kubernetes", "REST APIs", "Microservices", "Firebase", "Tailwind CSS",
+    "Data Engineering", "AI/ML", "FastAPI", "Node.js", "Next.js", "UI/UX Design", "Power BI"
   ];
 
   return (
@@ -20,16 +21,22 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-              Hi there! I'm Raj, a passionate creative developer with over 5 years of experience crafting digital experiences that merge technology with artistry.
+              Hello! I'm Raj, a versatile full-stack developer and creative problem-solver with a strong experience in building scalable, user-centric digital products.
             </p>
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-              My journey began with frontend development, but my passion for creating immersive experiences led me to explore the realm of interactive 3D graphics and animations.
+             I also have a knack for data engineering and AI/ML, which I leverage to create intelligent applications that drive business value.
             </p>
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-              I specialize in building unique, performant websites with modern technologies like React, Three.js, and GSAP, always pushing the boundaries of what's possible on the web.
+              With a passion for technology, I thrive on challenges that require innovative solutions and continuous learning.
+            </p>           
+            <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+              My expertise spans across frontend frameworks like Angular and React, backend systems using Spring Boot and Python, and cloud platforms like Google Cloud Platform and Firebase.
+            </p>
+            <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+              I love blending technology and innovation to create impactful solutions—like <a href="https://predictasense.web.app/" target="_blank" rel="noopener noreferrer">ProvansIQ</a>, an AI-powered predictive maintenance platform, and <a href="https://sushrutadx.streamlit.app/" target="_blank" rel="noopener noreferrer">SushrutaDX</a>, a healthcare analytics tool.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              When I'm not coding, you can find me experimenting with new design trends, contributing to open-source projects, or exploring the latest in creative technology.
+              Outside of coding, I enjoy writing technical blogs, contributing to open-source, and exploring ways to turn ideas into intelligent, real-world applications.
             </p>
           </div>
 
@@ -50,14 +57,18 @@ const About = () => {
               <h3 className="text-xl font-bold mb-6 text-gradient">Experience</h3>
               <div className="space-y-6">
                 <div className="glass-card p-6">
-                  <h4 className="font-bold">Senior Frontend Developer</h4>
-                  <p className="text-neon-purple">Creative Tech Agency • 2021-Present</p>
-                  <p className="text-foreground/70 mt-2">Leading development of interactive web experiences and 3D visualizations</p>
+                  <h4 className="font-bold">Software Developer</h4>
+                  <p className="text-neon-purple">GCP | AI | Angular + Spring Boot • 2022–Present</p>
+                  <p className="text-foreground/70 mt-2">
+                    Leading development of cloud-native, ML-integrated applications with real-time monitoring and interactive dashboards
+                  </p>
                 </div>
                 <div className="glass-card p-6">
-                  <h4 className="font-bold">UI/UX Developer</h4>
-                  <p className="text-neon-purple">Digital Solutions Inc • 2019-2021</p>
-                  <p className="text-foreground/70 mt-2">Designed and developed responsive web applications with focus on user experience</p>
+                  <h4 className="font-bold">Full Stack Developer</h4>
+                  <p className="text-neon-purple">Barclays | Capgemini • 2019–2022</p>
+                  <p className="text-foreground/70 mt-2">
+                    Built and deployed microservices, implemented secure authentication flows, and optimized application performance
+                  </p>
                 </div>
               </div>
             </div>
