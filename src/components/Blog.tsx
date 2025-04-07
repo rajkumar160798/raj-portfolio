@@ -58,7 +58,7 @@ const Blog = () => {
     {
       title: "How AI Detects Failures Before They Happen: A Predictive Maintenance Tutorial",
       excerpt: "Explore how machine learning and Airflow can work together to detect equipment anomalies before breakdowns occur.",
-      date: "March 26, 2024",
+      date: "March 26, 2025",
       readTime: "7 min",
       tags: ["AI", "Predictive Maintenance", "Airflow"],
       link: "https://medium.com/@myakalarajkumar1998/how-ai-detects-failures-before-they-happen-a-predictive-maintenance-tutorial-657b4ccaaaf0"
@@ -66,7 +66,7 @@ const Blog = () => {
     {
       title: "Forecasting Equipment Failures Using Facebook Prophet",
       excerpt: "Learn to apply time-series forecasting with Prophet to predict critical machine breakdowns and prevent downtime.",
-      date: "March 19, 2024",
+      date: "March 19, 2025",
       readTime: "6 min",
       tags: ["Forecasting", "Prophet", "Machine Learning"],
       link: "https://medium.com/@myakalarajkumar1998/forecasting-equipment-failures-using-facebook-prophet-89a2a2548103"
@@ -74,7 +74,7 @@ const Blog = () => {
     {
       title: "Deploying AI Forecast Models with FastAPI and Docker",
       excerpt: "A step-by-step guide to building and deploying your AI forecasting models using FastAPI, Docker, and REST APIs.",
-      date: "March 11, 2024",
+      date: "March 11, 2025",
       readTime: "8 min",
       tags: ["FastAPI", "Docker", "Model Deployment"],
       link: "https://medium.com/@myakalarajkumar1998/deploying-ai-forecast-models-with-fastapi-and-docker-4e00673ce77f"
@@ -82,7 +82,7 @@ const Blog = () => {
     {
       title: "Scaling AI Monitoring: Cloud Logging and Multi-Channel Forecast Alerts",
       excerpt: "Take your AI monitoring to the next level with real-time logging, Slack/Email alerts, and smarter observability tools.",
-      date: "March 3, 2024",
+      date: "March 3, 2025",
       readTime: "7 min",
       tags: ["Monitoring", "Slack Alerts", "Cloud Logging"],
       link: "https://medium.com/@myakalarajkumar1998/scaling-ai-monitoring-cloud-logging-and-multi-channel-forecast-alerts-a069fb746f09"
@@ -90,7 +90,7 @@ const Blog = () => {
     {
       title: "SushrutaDx: From Ancient Wisdom to AI Precision for Diabetes Risk Prediction",
       excerpt: "Introducing a healthcare AI tool that blends medical data insights with explainable ML to assess diabetes risk.",
-      date: "April 5, 2024",
+      date: "April 5, 2025",
       readTime: "9 min",
       tags: ["Healthcare", "AI", "SHAP", "Streamlit"],
       link: "https://medium.com/@myakalarajkumar1998/sushrutadx-from-ancient-wisdom-to-ai-precision-for-diabetes-risk-prediction-2c3e10e4ae37"
