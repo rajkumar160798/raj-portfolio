@@ -20,7 +20,7 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+            <p className="text-lg text-foreground/80 mb-6 leading-relaxed justify-center">
               Hello! I'm Raj, a versatile full-stack developer and creative problem-solver with a strong experience in building scalable, user-centric digital products.
             </p>
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">

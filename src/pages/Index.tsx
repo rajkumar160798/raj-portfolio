@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
@@ -8,6 +7,13 @@ import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Particles from "@/components/Particles";
+import TechStack from "@/components/TechStack";
+import AnimatedBackground from "@/components/AnimatedBackground";
+import LineAnimation from "@/components/LineAnimation";
+import HorizontalScroll from "@/components/HorizontalScroll";
+import ScrollToTop from "@/components/ScrollToTop";
+import CustomCursor from "@/components/CustomCursor";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Index = () => {
   useEffect(() => {
@@ -34,6 +40,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
+      <CustomCursor />
+      <AnimatedBackground />
       <Navigation />
       
       {/* Enhanced particles with better colors */}
@@ -44,14 +52,44 @@ const Index = () => {
       />
       
       <main>
-        <Hero />
-        <About />
-        <Work />
-        <Blog />
-        <Contact />
+        <AnimatePresence mode="wait">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <LineAnimation className="mb-24">
+              <Hero />
+            </LineAnimation>
+            
+            <LineAnimation className="mb-24">
+              <About />
+            </LineAnimation>
+            
+            <LineAnimation className="mb-24">
+              <TechStack />
+            </LineAnimation>
+            
+            <LineAnimation className="mb-24">
+              <HorizontalScroll>
+                <Work />
+              </HorizontalScroll>
+            </LineAnimation>
+            
+            <LineAnimation className="mb-24">
+              <Blog />
+            </LineAnimation>
+            
+            <LineAnimation>
+              <Contact />
+            </LineAnimation>
+          </motion.div>
+        </AnimatePresence>
       </main>
       
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

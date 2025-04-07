@@ -1,77 +1,76 @@
-
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface TypedTextProps {
-  words: string[];
+  texts: string[];
+  className?: string;
   typingSpeed?: number;
   deletingSpeed?: number;
-  delayBetweenWords?: number;
-  className?: string;
+  delay?: number;
 }
 
 const TypedText: React.FC<TypedTextProps> = ({
-  words,
-  typingSpeed = 150,
-  deletingSpeed = 100,
-  delayBetweenWords = 1500,
+  texts,
   className = '',
+  typingSpeed = 100,
+  deletingSpeed = 50,
+  delay = 2000,
 }) => {
-  const [displayText, setDisplayText] = useState('');
-  const [wordIndex, setWordIndex] = useState(0);
+  const [currentText, setCurrentText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isWaiting, setIsWaiting] = useState(false);
-
-  // useRef to store timeout IDs for cleanup
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    // Clear any existing timeout
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    let timeout: NodeJS.Timeout;
 
-    // If we're waiting between words, do nothing until wait time is over
-    if (isWaiting) {
-      timeoutRef.current = setTimeout(() => {
-        setIsWaiting(false);
-        setIsDeleting(true);
-      }, delayBetweenWords);
-      return;
-    }
-
-    const currentWord = words[wordIndex];
-
-    if (!isDeleting) {
-      // Typing forward
-      if (displayText.length < currentWord.length) {
-        timeoutRef.current = setTimeout(() => {
-          setDisplayText(currentWord.substring(0, displayText.length + 1));
-        }, typingSpeed);
-      } else {
-        // Completed typing the word, wait before deleting
-        setIsWaiting(true);
-      }
-    } else {
-      // Deleting
-      if (displayText.length > 0) {
-        timeoutRef.current = setTimeout(() => {
-          setDisplayText(currentWord.substring(0, displayText.length - 1));
+    if (!isPaused) {
+      if (isDeleting) {
+        // Delete text
+        timeout = setTimeout(() => {
+          setCurrentText((prev) => prev.slice(0, -1));
+          if (currentText === '') {
+            setIsDeleting(false);
+            setCurrentIndex((prev) => (prev + 1) % texts.length);
+            setIsPaused(true);
+            setTimeout(() => setIsPaused(false), 500);
+          }
         }, deletingSpeed);
       } else {
-        // Finished deleting, move to next word
-        setIsDeleting(false);
-        setWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+        // Type text
+        timeout = setTimeout(() => {
+          const currentWord = texts[currentIndex];
+          setCurrentText((prev) => currentWord.slice(0, prev.length + 1));
+          if (currentText === currentWord) {
+            setIsPaused(true);
+            setTimeout(() => {
+              setIsPaused(false);
+              setIsDeleting(true);
+            }, delay);
+          }
+        }, typingSpeed);
       }
     }
 
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
-  }, [displayText, wordIndex, isDeleting, isWaiting, words, typingSpeed, deletingSpeed, delayBetweenWords]);
+    return () => clearTimeout(timeout);
+  }, [currentText, currentIndex, isDeleting, isPaused, texts, typingSpeed, deletingSpeed, delay]);
 
   return (
-    <span className={className}>
-      {displayText}
-      <span className="typing-cursor"></span>
-    </span>
+    <motion.span
+      className={className}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      {currentText}
+      <motion.span
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ duration: 0.8, repeat: Infinity }}
+        className="ml-0.5"
+      >
+        |
+      </motion.span>
+    </motion.span>
   );
 };
 
