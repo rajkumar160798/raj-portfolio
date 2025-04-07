@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Github, Linkedin, FileText } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
-            <a href="#home" className="text-2xl font-bold neon-text">Raj</a>
+            <a href="#home" className="text-2xl font-bold text-neon-purple">Raj</a>
             <p className="text-foreground/60 mt-2">
               Creative Developer & Designer
             </p>
@@ -38,9 +39,39 @@ const Footer = () => {
             </a>
           </nav>
           
-          <div className="text-foreground/50 text-sm">
-            Designed and built with 💜 by Raj
+          <div className="flex items-center gap-4">
+            <a 
+              href="https://github.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-foreground/70 hover:text-neon-purple transition-colors p-2 rounded-full hover:bg-neon-purple/10"
+              aria-label="GitHub"
+            >
+              <Github size={20} />
+            </a>
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-foreground/70 hover:text-neon-purple transition-colors p-2 rounded-full hover:bg-neon-purple/10"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a 
+              href="https://medium.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-foreground/70 hover:text-neon-purple transition-colors p-2 rounded-full hover:bg-neon-purple/10"
+              aria-label="Medium"
+            >
+              <FileText size={20} />
+            </a>
           </div>
+        </div>
+        
+        <div className="text-foreground/50 text-sm text-center mt-6">
+          Designed and built with 💜 by Raj
         </div>
       </div>
     </footer>

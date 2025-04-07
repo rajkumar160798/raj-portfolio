@@ -20,7 +20,7 @@ const Hero = () => {
           
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-4">
             Hello! I'm{" "}
-            <span className="neon-text animate-neon-flicker">Raj</span>
+            <span className="text-neon-purple">Raj</span>
           </h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-medium text-foreground/90">
             I build{" "}
